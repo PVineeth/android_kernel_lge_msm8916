@@ -44,6 +44,13 @@ config FB_MSM_MDSS_MDP3
 	The MDP3 provides support for an older version display controller
 	included in latest display sub-system, known as MDSS.
 
+config FB_MSM_MDSS_KCAL_CTRL
+	depends on FB_MSM_MDSS
+	bool "MDSS color control"
+	---help---
+	  Enable sysfs for post-processing control of mdss-mdp5 display
+	  controllers in MDSS.
+
 config LCD_KCAL
         bool "Enable sysfs for LCD KCAL"
         default n
@@ -172,4 +179,5 @@ config LGE_DISPLAY_AOD_SUPPORT
     if you say yes here you get support for the 'Always On Display'
 config LGE_DISPLAY_DSI_CMD_HS_DISABLE
 	bool "Disable mipi cmd in hs mode"
-	default n
+
+
